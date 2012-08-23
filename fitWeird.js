@@ -22,7 +22,7 @@ var fitWeird = function(){
   document.body.appendChild(newDiv);
 
   fillVars();
-  window.addEventListener('resize', 'fillVars');
+  window.addEventListener('resize', fillVars);
 };
 
 fitWeird();
