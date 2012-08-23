@@ -13,7 +13,7 @@ var fitWeird = function(){
   var newContent = '<span id=fitweird-width></span> &times; <span id=fitweird-height></span>';
   newDiv.style.position = 'fixed';
   newDiv.style.top = '0';
-  newDiv.style.right = '0';
+  newDiv.style.left = '0';
   newDiv.style.backgroundColor = '#3a3a3a';
   newDiv.style.padding = '0.4em 1em';
   newDiv.style.color = '#090';
