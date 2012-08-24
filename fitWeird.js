@@ -33,10 +33,11 @@ var fillVars = function(){
 
 var setupFitWeird = function(){
 
-  if ( !document.getElementById('fitweird-width-px') ) {
+  if ( !document.getElementById('fitweird') ) {
     var newDiv = document.createElement('div');
     var newContent = '<span id=fitweird-width-px></span>px &times; <span id=fitweird-height-px></span>px ';
     newContent += ':: <span id=fitweird-width-em></span>em &times; <span id=fitweird-height-em></span>em';
+    newDiv.setAttribute('id', 'fitweird');
     newDiv.style.position = 'fixed';
     newDiv.style.bottom = '0';
     newDiv.style.right = '0';
