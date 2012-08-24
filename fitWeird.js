@@ -22,12 +22,12 @@ var init = function(){
 }
 
 var fillVars = function(){
-  widthPx.innerHTML = window.outerWidth;
-  heightPx.innerHTML = window.outerHeight;
+  widthPx.innerHTML = window.innerWidth;
+  heightPx.innerHTML = window.innerHeight;
 
   // TODO: Calc EM size based off of body font size (i.e user zooming)
-  widthEm.innerHTML = window.outerWidth / 16;
-  heightEm.innerHTML = window.outerHeight / 16;
+  widthEm.innerHTML = window.innerWidth / 16;
+  heightEm.innerHTML = window.innerHeight / 16;
 
 }
 
