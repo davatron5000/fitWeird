@@ -44,7 +44,7 @@ var setupFitWeird = function(){
     newDiv.style.padding = '0.4em 1em';
     newDiv.style.color = '#00CC00';
     newDiv.style.fontFamily = 'monospace';
-    newDiv.style.z-index = '9999';
+    newDiv.style.zIndex = '9999';
     newDiv.innerHTML = newContent;
     document.body.appendChild(newDiv);
   }
