@@ -1,20 +1,21 @@
+// ==========================================
+// fitWeird by Davatron5000
+// FitWeird helps you add breakpoints when
+// things get weird. It's about as dumb as it
+// gets. Resize your window and it tells you
+// dimensions in REM, PX and EM.
+//
+// https://github.com/davatron5000/fitWeird
+// http://davatron5000.github.com/fitWeird
+// ==========================================
+
 ;(function(){
 
 // ==================================
 // Defined Global Variables
 // ==================================
 
-var widthPx,
-    heightPx,
-    widthEm,
-    heightEm,
-    widthRem,
-    heightRem,
-    htmlTag,
-    bodyTag,
-    htmlFontSize,
-    bodyFontSize,
-    rems;
+var widthPx, heightPx, widthEm, heightEm, widthRem, heightRem, htmlTag, bodyTag, htmlFontSize, bodyFontSize, rems;
 
 
 // ==================================
