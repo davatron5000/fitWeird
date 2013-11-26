@@ -1,6 +1,6 @@
 ;(function(){
 
-var widthPx, heightPx, widthEm, heightEm;
+var widthPx, heightPx, widthEm, heightEm, bodyFontSize;
 
 var init = function(){
 
@@ -25,9 +25,11 @@ var fillVars = function(){
   widthPx.innerHTML = window.innerWidth;
   heightPx.innerHTML = window.innerHeight;
 
-  // TODO: Calc EM size based off of body font size (i.e user zooming)
-  widthEm.innerHTML = window.innerWidth / 16;
-  heightEm.innerHTML = window.innerHeight / 16;
+  bodyFontSize = window.getComputedStyle(document.body).fontSize || 16;
+  bodyFontSize = parseInt(bodyFontSize, 10);
+
+  widthEm.innerHTML = window.innerWidth / bodyFontSize;
+  heightEm.innerHTML = window.innerHeight / bodyFontSize;
 
 }
 
