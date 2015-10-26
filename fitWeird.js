@@ -1,4 +1,4 @@
-;(function(){
+;(function(window, document, undefined){
 
 var widthPx, heightPx, widthEm, heightEm;
 
@@ -19,9 +19,26 @@ var init = function(){
   // Update the Div
   window.addEventListener('resize', fillVars);
 
-}
+};
 
-var fillVars = function(){
+// Put the Resize on "Chill Mode"
+var debounce = function(func, wait, immediate){
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+
+var fillVars = debounce(function(){
+
   widthPx.innerHTML = window.innerWidth;
   heightPx.innerHTML = window.innerHeight;
 
@@ -29,7 +46,7 @@ var fillVars = function(){
   widthEm.innerHTML = window.innerWidth / 16;
   heightEm.innerHTML = window.innerHeight / 16;
 
-}
+}, 100);
 
 var setupFitWeird = function(){
 
@@ -54,4 +71,4 @@ var setupFitWeird = function(){
 
 init();
 
-})(window);
+}(window, document));
